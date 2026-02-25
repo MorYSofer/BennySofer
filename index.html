@@ -179,6 +179,15 @@
     /* Smooth scroll */
     html { scroll-behavior: smooth; }
 
+    /* Availability dot pulse */
+    @keyframes availability-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .availability-dot {
+      animation: availability-pulse 2.4s ease-in-out infinite;
+    }
+
     /* Card hover */
     .service-card {
       transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, opacity 0.25s ease;
@@ -385,8 +394,8 @@
           padding: 6px 14px; border-radius: 100px;
           margin-bottom: 28px;
         ">
-          <div style="width: 7px; height: 7px; border-radius: 50%; background: #74c69d; flex-shrink:0;"></div>
-          <span style="color: #74c69d; font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">זמין לתיקונים — אזור אשקלון ואשדוד</span>
+          <div class="availability-dot" style="width: 7px; height: 7px; border-radius: 50%; background: #74c69d; flex-shrink:0;"></div>
+          <span style="color: #74c69d; font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">זמין לתיקונים — אזור אשדוד, אשקלון והסביבה</span>
         </div>
 
         <!-- Headline -->
